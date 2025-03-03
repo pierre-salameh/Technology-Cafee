@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="C:\Users\AC24\Desktop\back\backyy\phpunit.xml" tests="31" assertions="29" errors="6" failures="7" skipped="4" time="78.388289">
+    <testsuite name="Unit" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.030882">
+      <testsuite name="Tests\Unit\ExampleTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Unit\ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.030882">
+        <testcase name="test_that_true_is_true" file="C:\Users\AC24\Desktop\back\backyy\tests\Unit\ExampleTest.php" line="12" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" assertions="1" time="0.030882"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Feature" tests="30" assertions="28" errors="6" failures="7" skipped="4" time="78.357407">
+      <testsuite name="Tests\Feature\ApiTokenPermissionsTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\ApiTokenPermissionsTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="19.654452">
+        <testcase name="test_api_token_permissions_can_be_updated" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\ApiTokenPermissionsTest.php" line="15" class="Tests\Feature\ApiTokenPermissionsTest" classname="Tests.Feature.ApiTokenPermissionsTest" assertions="3" time="19.654452"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\AuthenticationTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\AuthenticationTest.php" tests="3" assertions="3" errors="1" failures="0" skipped="0" time="1.685365">
+        <testcase name="test_login_screen_can_be_rendered" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\AuthenticationTest.php" line="13" class="Tests\Feature\AuthenticationTest" classname="Tests.Feature.AuthenticationTest" assertions="1" time="0.301380"/>
+        <testcase name="test_users_can_authenticate_using_the_login_screen" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\AuthenticationTest.php" line="20" class="Tests\Feature\AuthenticationTest" classname="Tests.Feature.AuthenticationTest" assertions="1" time="0.827909">
+          <error type="Symfony\Component\Routing\Exception\RouteNotFoundException">Tests\Feature\AuthenticationTest::test_users_can_authenticate_using_the_login_screen&#13;
+Symfony\Component\Routing\Exception\RouteNotFoundException: Route [dashboard] not defined.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php:516
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php:853
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\AuthenticationTest.php:30</error>
+        </testcase>
+        <testcase name="test_users_can_not_authenticate_with_invalid_password" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\AuthenticationTest.php" line="33" class="Tests\Feature\AuthenticationTest" classname="Tests.Feature.AuthenticationTest" assertions="1" time="0.556076"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\BrowserSessionsTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\BrowserSessionsTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.990778">
+        <testcase name="test_other_browser_sessions_can_be_logged_out" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\BrowserSessionsTest.php" line="13" class="Tests\Feature\BrowserSessionsTest" classname="Tests.Feature.BrowserSessionsTest" assertions="1" time="0.990778"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\CreateApiTokenTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\CreateApiTokenTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.140331">
+        <testcase name="test_api_tokens_can_be_created" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\CreateApiTokenTest.php" line="14" class="Tests\Feature\CreateApiTokenTest" classname="Tests.Feature.CreateApiTokenTest" assertions="0" time="0.140331">
+          <error type="BadMethodCallException">Tests\Feature\CreateApiTokenTest::test_api_tokens_can_be_created&#13;
+BadMethodCallException: Call to undefined method Database\Factories\UserFactory::withPersonalTeam()
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:67
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Factories\Factory.php:926
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\CreateApiTokenTest.php:20</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Feature\DeleteAccountTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\DeleteAccountTest.php" tests="2" assertions="2" errors="0" failures="1" skipped="0" time="8.001605">
+        <testcase name="test_user_accounts_can_be_deleted" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\DeleteAccountTest.php" line="14" class="Tests\Feature\DeleteAccountTest" classname="Tests.Feature.DeleteAccountTest" assertions="1" time="7.410028">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\DeleteAccountTest::test_user_accounts_can_be_deleted&#13;
+Failed asserting that App\Models\User Object #4993 (
+    'connection' =&gt; 'mysql',
+    'table' =&gt; 'users',
+    'primaryKey' =&gt; 'id',
+    'keyType' =&gt; 'int',
+    'incrementing' =&gt; true,
+    'with' =&gt; Array &amp;0 [],
+    'withCount' =&gt; Array &amp;1 [],
+    'preventsLazyLoading' =&gt; false,
+    'perPage' =&gt; 15,
+    'exists' =&gt; true,
+    'wasRecentlyCreated' =&gt; false,
+    'escapeWhenCastingToString' =&gt; false,
+    'attributes' =&gt; Array &amp;2 [
+        'id' =&gt; 5,
+        'name' =&gt; 'Annetta Strosin',
+        'email' =&gt; 'larson.elinor@example.com',
+        'email_verified_at' =&gt; '2024-11-30 23:36:41',
+        'password' =&gt; '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' =&gt; 't3m1cdjprz',
+        'created_at' =&gt; '2024-11-30 23:36:41',
+        'updated_at' =&gt; '2024-11-30 23:36:41',
+    ],
+    'original' =&gt; Array &amp;3 [
+        'id' =&gt; 5,
+        'name' =&gt; 'Annetta Strosin',
+        'email' =&gt; 'larson.elinor@example.com',
+        'email_verified_at' =&gt; '2024-11-30 23:36:41',
+        'password' =&gt; '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'remember_token' =&gt; 't3m1cdjprz',
+        'created_at' =&gt; '2024-11-30 23:36:41',
+        'updated_at' =&gt; '2024-11-30 23:36:41',
+    ],
+    'changes' =&gt; Array &amp;4 [],
+    'casts' =&gt; Array &amp;5 [
+        'email_verified_at' =&gt; 'datetime',
+    ],
+    'classCastCache' =&gt; Array &amp;6 [],
+    'attributeCastCache' =&gt; Array &amp;7 [],
+    'dateFormat' =&gt; null,
+    'appends' =&gt; Array &amp;8 [],
+    'dispatchesEvents' =&gt; Array &amp;9 [],
+    'observables' =&gt; Array &amp;10 [],
+    'relations' =&gt; Array &amp;11 [],
+    'touches' =&gt; Array &amp;12 [],
+    'timestamps' =&gt; true,
+    'usesUniqueIds' =&gt; false,
+    'hidden' =&gt; Array &amp;13 [
+        0 =&gt; 'password',
+        1 =&gt; 'remember_token',
+    ],
+    'visible' =&gt; Array &amp;14 [],
+    'fillable' =&gt; Array &amp;15 [
+        0 =&gt; 'name',
+        1 =&gt; 'email',
+        2 =&gt; 'password',
+    ],
+    'guarded' =&gt; Array &amp;16 [
+        0 =&gt; '*',
+    ],
+    'authPasswordName' =&gt; 'password',
+    'rememberTokenName' =&gt; 'remember_token',
+    'accessToken' =&gt; null,
+) is null.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\DeleteAccountTest.php:26</failure>
+        </testcase>
+        <testcase name="test_correct_password_must_be_provided_before_account_can_be_deleted" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\DeleteAccountTest.php" line="29" class="Tests\Feature\DeleteAccountTest" classname="Tests.Feature.DeleteAccountTest" assertions="1" time="0.591577"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\DeleteApiTokenTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\DeleteApiTokenTest.php" tests="1" assertions="0" errors="1" failures="0" skipped="0" time="0.138302">
+        <testcase name="test_api_tokens_can_be_deleted" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\DeleteApiTokenTest.php" line="15" class="Tests\Feature\DeleteApiTokenTest" classname="Tests.Feature.DeleteApiTokenTest" assertions="0" time="0.138302">
+          <error type="BadMethodCallException">Tests\Feature\DeleteApiTokenTest::test_api_tokens_can_be_deleted&#13;
+BadMethodCallException: Call to undefined method Database\Factories\UserFactory::withPersonalTeam()
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:67
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Factories\Factory.php:926
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\DeleteApiTokenTest.php:21</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Feature\EmailVerificationTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\EmailVerificationTest.php" tests="3" assertions="0" errors="0" failures="0" skipped="3" time="0.439351">
+        <testcase name="test_email_verification_screen_can_be_rendered" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\EmailVerificationTest.php" line="17" class="Tests\Feature\EmailVerificationTest" classname="Tests.Feature.EmailVerificationTest" assertions="0" time="0.168688">
+          <skipped/>
+        </testcase>
+        <testcase name="test_email_can_be_verified" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\EmailVerificationTest.php" line="30" class="Tests\Feature\EmailVerificationTest" classname="Tests.Feature.EmailVerificationTest" assertions="0" time="0.141652">
+          <skipped/>
+        </testcase>
+        <testcase name="test_email_can_not_verified_with_invalid_hash" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\EmailVerificationTest.php" line="54" class="Tests\Feature\EmailVerificationTest" classname="Tests.Feature.EmailVerificationTest" assertions="0" time="0.129011">
+          <skipped/>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Feature\ExampleTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\ExampleTest.php" tests="1" assertions="1" errors="0" failures="1" skipped="0" time="3.340103">
+        <testcase name="test_the_application_returns_a_successful_response" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\ExampleTest.php" line="13" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" assertions="1" time="3.340103">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\ExampleTest::test_the_application_returns_a_successful_response&#13;
+Expected response status code [200] but received 500.
+Failed asserting that 500 is identical to 200.&#13;
+&#13;
+The following exception occurred during the last request:
+
+InvalidArgumentException: View [welcome] not found. in C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php:139
+Stack trace:
+#0 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php(79): Illuminate\View\FileViewFinder-&gt;findInPaths('welcome', Array)
+#1 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\View\Factory.php(151): Illuminate\View\FileViewFinder-&gt;find('welcome')
+#2 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(1062): Illuminate\View\Factory-&gt;make('welcome', Array, Array)
+#3 C:\Users\AC24\Desktop\back\backyy\routes\web.php(18): view('welcome')
+#4 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php(40): Illuminate\Routing\RouteFileRegistrar-&gt;{closure}()
+#5 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\Route.php(242): Illuminate\Routing\CallableDispatcher-&gt;dispatch(Object(Illuminate\Routing\Route), Object(Closure))
+#6 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\Route.php(213): Illuminate\Routing\Route-&gt;runCallable()
+#7 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(808): Illuminate\Routing\Route-&gt;run()
+#8 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(144): Illuminate\Routing\Router-&gt;Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets.php(20): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#10 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#11 C:\Users\AC24\Desktop\back\backyy\vendor\inertiajs\inertia-laravel\src\Middleware.php(86): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#12 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Inertia\Middleware-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\jetstream\src\Http\Middleware\ShareInertiaData.php(69): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Laravel\Jetstream\Http\Middleware\ShareInertiaData-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php(51): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Routing\Middleware\SubstituteBindings-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php(88): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php(49): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\View\Middleware\ShareErrorsFromSession-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(121): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(64): Illuminate\Session\Middleware\StartSession-&gt;handleStatefulRequest(Object(Illuminate\Http\Request), Object(Illuminate\Session\Store), Object(Closure))
+#23 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Session\Middleware\StartSession-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(75): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Cookie\Middleware\EncryptCookies-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(119): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(807): Illuminate\Pipeline\Pipeline-&gt;then(Object(Closure))
+#30 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(786): Illuminate\Routing\Router-&gt;runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#31 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(750): Illuminate\Routing\Router-&gt;runRoute(Object(Illuminate\Http\Request), Object(Illuminate\Routing\Route))
+#32 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\Router.php(739): Illuminate\Routing\Router-&gt;dispatchToRoute(Object(Illuminate\Http\Request))
+#33 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(201): Illuminate\Routing\Router-&gt;dispatch(Object(Illuminate\Http\Request))
+#34 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(144): Illuminate\Foundation\Http\Kernel-&gt;Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#35 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php(31): Illuminate\Foundation\Http\Middleware\TransformsRequest-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(21): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php(51): Illuminate\Foundation\Http\Middleware\TransformsRequest-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Foundation\Http\Middleware\TrimStrings-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Http\Middleware\ValidatePostSize.php(27): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Http\Middleware\ValidatePostSize-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#43 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php(110): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#44 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php(49): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Http\Middleware\HandleCors-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#47 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php(58): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#48 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Http\Middleware\TrustProxies-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#49 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks.php(22): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#50 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(183): Illuminate\Foundation\Http\Middleware\InvokeDeferredCallbacks-&gt;handle(Object(Illuminate\Http\Request), Object(Closure))
+#51 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(119): Illuminate\Pipeline\Pipeline-&gt;Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#52 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(176): Illuminate\Pipeline\Pipeline-&gt;then(Object(Closure))
+#53 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(145): Illuminate\Foundation\Http\Kernel-&gt;sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#54 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(604): Illuminate\Foundation\Http\Kernel-&gt;handle(Object(Illuminate\Http\Request))
+#55 C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php(365): Illuminate\Foundation\Testing\TestCase-&gt;call('GET', '/', Array, Array, Array, Array)
+#56 C:\Users\AC24\Desktop\back\backyy\tests\Feature\ExampleTest.php(15): Illuminate\Foundation\Testing\TestCase-&gt;get('/')
+#57 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\Framework\TestCase.php(1234): Tests\Feature\ExampleTest-&gt;test_the_application_returns_a_successful_response()
+#58 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\Framework\TestCase.php(515): PHPUnit\Framework\TestCase-&gt;runTest()
+#59 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\Framework\TestRunner\TestRunner.php(86): PHPUnit\Framework\TestCase-&gt;runBare()
+#60 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\Framework\TestCase.php(362): PHPUnit\Framework\TestRunner-&gt;run(Object(Tests\Feature\ExampleTest))
+#61 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\Framework\TestSuite.php(369): PHPUnit\Framework\TestCase-&gt;run()
+#62 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\Framework\TestSuite.php(369): PHPUnit\Framework\TestSuite-&gt;run()
+#63 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\Framework\TestSuite.php(369): PHPUnit\Framework\TestSuite-&gt;run()
+#64 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(64): PHPUnit\Framework\TestSuite-&gt;run()
+#65 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\src\TextUI\Application.php(209): PHPUnit\TextUI\TestRunner-&gt;run(Object(PHPUnit\TextUI\Configuration\Configuration), Object(PHPUnit\Runner\ResultCache\DefaultResultCache), Object(PHPUnit\Framework\TestSuite))
+#66 C:\Users\AC24\Desktop\back\backyy\vendor\phpunit\phpunit\phpunit(104): PHPUnit\TextUI\Application-&gt;run(Array)
+#67 {main}
+
+----------------------------------------------------------------------------------
+
+View [welcome] not found.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Testing\TestResponseAssert.php:45
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:160
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\ExampleTest.php:17</failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Feature\PasswordConfirmationTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordConfirmationTest.php" tests="3" assertions="3" errors="1" failures="0" skipped="0" time="1.304806">
+        <testcase name="test_confirm_password_screen_can_be_rendered" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordConfirmationTest.php" line="13" class="Tests\Feature\PasswordConfirmationTest" classname="Tests.Feature.PasswordConfirmationTest" assertions="0" time="0.155668">
+          <error type="BadMethodCallException">Tests\Feature\PasswordConfirmationTest::test_confirm_password_screen_can_be_rendered&#13;
+BadMethodCallException: Call to undefined method Database\Factories\UserFactory::withPersonalTeam()
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:67
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Factories\Factory.php:926
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordConfirmationTest.php:15</error>
+        </testcase>
+        <testcase name="test_password_can_be_confirmed" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordConfirmationTest.php" line="22" class="Tests\Feature\PasswordConfirmationTest" classname="Tests.Feature.PasswordConfirmationTest" assertions="2" time="0.605588"/>
+        <testcase name="test_password_is_not_confirmed_with_invalid_password" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordConfirmationTest.php" line="34" class="Tests\Feature\PasswordConfirmationTest" classname="Tests.Feature.PasswordConfirmationTest" assertions="1" time="0.543550"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\PasswordResetTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordResetTest.php" tests="4" assertions="4" errors="0" failures="3" skipped="0" time="15.081800">
+        <testcase name="test_reset_password_link_screen_can_be_rendered" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordResetTest.php" line="16" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" assertions="1" time="0.162680"/>
+        <testcase name="test_reset_password_link_can_be_requested" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordResetTest.php" line="27" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" assertions="1" time="5.025917">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\PasswordResetTest::test_reset_password_link_can_be_requested&#13;
+The expected [Illuminate\Auth\Notifications\ResetPassword] notification was not sent.
+Failed asserting that false is true.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Testing\Fakes\NotificationFake.php:89
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:358
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordResetTest.php:41</failure>
+        </testcase>
+        <testcase name="test_reset_password_screen_can_be_rendered" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordResetTest.php" line="44" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" assertions="1" time="4.949805">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\PasswordResetTest::test_reset_password_screen_can_be_rendered&#13;
+The expected [Illuminate\Auth\Notifications\ResetPassword] notification was not sent.
+Failed asserting that false is true.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Testing\Fakes\NotificationFake.php:89
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:358
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordResetTest.php:58</failure>
+        </testcase>
+        <testcase name="test_password_can_be_reset_with_valid_token" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordResetTest.php" line="67" class="Tests\Feature\PasswordResetTest" classname="Tests.Feature.PasswordResetTest" assertions="1" time="4.943397">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\PasswordResetTest::test_password_can_be_reset_with_valid_token&#13;
+The expected [Illuminate\Auth\Notifications\ResetPassword] notification was not sent.
+Failed asserting that false is true.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Testing\Fakes\NotificationFake.php:89
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:358
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\PasswordResetTest.php:81</failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Feature\ProfileInformationTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\ProfileInformationTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.755589">
+        <testcase name="test_profile_information_can_be_updated" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\ProfileInformationTest.php" line="13" class="Tests\Feature\ProfileInformationTest" classname="Tests.Feature.ProfileInformationTest" assertions="2" time="0.755589"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\RegistrationTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\RegistrationTest.php" tests="3" assertions="2" errors="1" failures="0" skipped="1" time="0.716135">
+        <testcase name="test_registration_screen_can_be_rendered" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\RegistrationTest.php" line="14" class="Tests\Feature\RegistrationTest" classname="Tests.Feature.RegistrationTest" assertions="1" time="0.195457"/>
+        <testcase name="test_registration_screen_cannot_be_rendered_if_support_is_disabled" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\RegistrationTest.php" line="25" class="Tests\Feature\RegistrationTest" classname="Tests.Feature.RegistrationTest" assertions="0" time="0.149557">
+          <skipped/>
+        </testcase>
+        <testcase name="test_new_users_can_register" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\RegistrationTest.php" line="36" class="Tests\Feature\RegistrationTest" classname="Tests.Feature.RegistrationTest" assertions="1" time="0.371121">
+          <error type="Symfony\Component\Routing\Exception\RouteNotFoundException">Tests\Feature\RegistrationTest::test_new_users_can_register&#13;
+Symfony\Component\Routing\Exception\RouteNotFoundException: Route [dashboard] not defined.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php:516
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php:853
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\RegistrationTest.php:51</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Feature\TwoFactorAuthenticationSettingsTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\TwoFactorAuthenticationSettingsTest.php" tests="3" assertions="2" errors="1" failures="2" skipped="0" time="23.736473">
+        <testcase name="test_two_factor_authentication_can_be_enabled" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\TwoFactorAuthenticationSettingsTest.php" line="14" class="Tests\Feature\TwoFactorAuthenticationSettingsTest" classname="Tests.Feature.TwoFactorAuthenticationSettingsTest" assertions="1" time="4.881971">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\TwoFactorAuthenticationSettingsTest::test_two_factor_authentication_can_be_enabled&#13;
+Failed asserting that null is not null.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\TwoFactorAuthenticationSettingsTest.php:26</failure>
+        </testcase>
+        <testcase name="test_recovery_codes_can_be_regenerated" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\TwoFactorAuthenticationSettingsTest.php" line="30" class="Tests\Feature\TwoFactorAuthenticationSettingsTest" classname="Tests.Feature.TwoFactorAuthenticationSettingsTest" assertions="0" time="14.100742">
+          <error type="BadMethodCallException">Tests\Feature\TwoFactorAuthenticationSettingsTest::test_recovery_codes_can_be_regenerated&#13;
+BadMethodCallException: Call to undefined method App\Models\User::recoveryCodes()
+&#13;
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:67
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:36
+C:\Users\AC24\Desktop\back\backyy\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:2367
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\TwoFactorAuthenticationSettingsTest.php:47</error>
+        </testcase>
+        <testcase name="test_two_factor_authentication_can_be_disabled" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\TwoFactorAuthenticationSettingsTest.php" line="51" class="Tests\Feature\TwoFactorAuthenticationSettingsTest" classname="Tests.Feature.TwoFactorAuthenticationSettingsTest" assertions="1" time="4.753761">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\TwoFactorAuthenticationSettingsTest::test_two_factor_authentication_can_be_disabled&#13;
+Failed asserting that null is not null.
+&#13;
+C:\Users\AC24\Desktop\back\backyy\tests\Feature\TwoFactorAuthenticationSettingsTest.php:63</failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Feature\UpdatePasswordTest" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\UpdatePasswordTest.php" tests="3" assertions="5" errors="0" failures="0" skipped="0" time="2.372317">
+        <testcase name="test_password_can_be_updated" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\UpdatePasswordTest.php" line="14" class="Tests\Feature\UpdatePasswordTest" classname="Tests.Feature.UpdatePasswordTest" assertions="1" time="0.584898"/>
+        <testcase name="test_current_password_must_be_correct" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\UpdatePasswordTest.php" line="27" class="Tests\Feature\UpdatePasswordTest" classname="Tests.Feature.UpdatePasswordTest" assertions="2" time="0.921919"/>
+        <testcase name="test_new_passwords_must_match" file="C:\Users\AC24\Desktop\back\backyy\tests\Feature\UpdatePasswordTest.php" line="42" class="Tests\Feature\UpdatePasswordTest" classname="Tests.Feature.UpdatePasswordTest" assertions="2" time="0.865500"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

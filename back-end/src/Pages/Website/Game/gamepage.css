@@ -1,0 +1,118 @@
+
+
+.game-container {
+  padding: 20px;
+  background-image: url('/src/Image/pic.jpg'); 
+  background-size: cover;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  filter: contrast(1.2) brightness(1.1);  
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0px 0px 15px #ffcc00, 0px 0px 30px ;
+}
+
+.question-section {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1); 
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.timer {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #ffcc00;
+  text-shadow: 0px 0px 10px #ffcc00;
+}
+
+.answers-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.answer-button {
+  background: rgba(255, 255, 255, 0.1); 
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0px 0px 10px #000;
+}
+
+.answer-button:hover {
+  background: rgba(255, 255, 255, 0.1); 
+  color: #fff;
+  box-shadow: 0px 0px 20px #ffcc00;
+}
+
+.help-button {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1); 
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0px 0px 10px #000;
+}
+
+.help-button:hover {
+  background: rgba(255, 255, 255, 0.1); 
+  box-shadow: 0px 0px 20px white;
+}
+
+.result {
+  background: rgba(255, 255, 255, 0.1); 
+  background-size: cover;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  filter: contrast(1.2) brightness(1.1);  
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+.result h2 {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px 10px #000;
+}
+
+
+
+
+
