@@ -18,7 +18,7 @@ export default function Persistlogin(){
      useEffect(() => {
     async function refresh() {
         try{
-            await axios.post(`http://127.0.0.1:8000/api/refresh`,null ,{
+            await axios.post(`${process.env.REACT_APP_API_URL}/refresh`,null ,{
                 headers:{
                     Authorization: "Bearer " + gettooken,
                 }

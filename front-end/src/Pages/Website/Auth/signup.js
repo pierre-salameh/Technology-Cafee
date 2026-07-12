@@ -55,7 +55,7 @@ export default function Signup(){
     const tableId = localStorage.getItem("tableId");
 
     try{
-        let res= await axios.post("http://127.0.0.1:8000/api/register",
+        let res= await axios.post(`${process.env.REACT_APP_API_URL}/register`,
             {
                 name: name,
                 email:email,
@@ -72,25 +72,27 @@ export default function Signup(){
         nav("/home");
 
     }catch (err) {
-        if (err.response && err.response.status === 422) {
-            const errorData = err.response.data.errors;
+    console.log("FULL ERROR:", err);
+    console.log("RESPONSE:", err.response);
+    console.log("DATA:", err.response?.data);
+    console.log("STATUS:", err.response?.status);
 
-            
-            if (errorData.email) {
-                setemailerror(true);
-            } else {
-                setemailerror(false);
-            }
+    if (err.response && err.response.status === 422) {
+        const errorData = err.response.data.errors;
 
-           
-            if (errorData.password) {
-                setPasswordError("Password must be at least 8 characters."); 
-            } else {
-                setPasswordError(""); 
-            }
+        if (errorData.email) {
+            setemailerror(true);
+        } else {
+            setemailerror(false);
         }
-        setaccept(true);
+
+        if (errorData.password) {
+            setPasswordError("Password must be at least 8 characters.");
+        } else {
+            setPasswordError("");
+        }
     }
+}
 
    }
     return (

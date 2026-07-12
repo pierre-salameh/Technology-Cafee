@@ -23,7 +23,7 @@ export default function UpdateUser(){
     const id = window.location.pathname.split("/").slice(-1)[0];
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/user/showbyid/${id}`,{
+        fetch(`${process.env.REACT_APP_API_URL}/user/showbyid/${id}`,{
             headers:{
                 Authorization:"Bearer " + token,
             },
@@ -41,7 +41,7 @@ export default function UpdateUser(){
         setaccept(true);
     
         try{
-            let res= await axios.post(`http://127.0.0.1:8000/api/user/update/${id}`,
+            let res= await axios.post(`${process.env.REACT_APP_API_URL}/user/update/${id}`,
                 {
                     name: name,
                     email:email,

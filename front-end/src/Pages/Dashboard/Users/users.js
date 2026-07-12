@@ -12,7 +12,7 @@ export default function Users(){
 
     useEffect(() => {
         axios
-        .get("http://127.0.0.1:8000/api/user/show",{
+        .get(`${process.env.REACT_APP_API_URL}/user/show`,{
             headers:{
                 Accept:"application/json",
                 Authorization:"Bearer " + token,
@@ -24,7 +24,7 @@ export default function Users(){
 
     async function deleteuser(id){
         try{
-        const res= await axios.delete(`http://127.0.0.1:8000/api/user/delete/${id}`,{
+        const res= await axios.delete(`${process.env.REACT_APP_API_URL}/user/delete/${id}`,{
             headers:{
                 Authorization: "Bearer " + token,
 

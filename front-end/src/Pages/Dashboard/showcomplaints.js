@@ -13,7 +13,7 @@ export default function ShowComplaints() {
 
   async function fetchComplaints() {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/complaints');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/complaints`);
       setComplaints(response.data); 
     } catch (err) {
       console.error('Error fetching complaints:', err);
@@ -24,7 +24,7 @@ export default function ShowComplaints() {
  
   async function deleteAllComplaints() {
     try {
-      await axios.delete('http://127.0.0.1:8000/api/complaints');
+      await axios.delete(`${process.env.REACT_APP_API_URL}/complaints`);
       setComplaints([]);
       setMessage('تم حذف جميع الشكاوى بنجاح');
     } catch (err) {

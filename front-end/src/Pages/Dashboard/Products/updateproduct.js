@@ -22,7 +22,7 @@ export default function Updateproducts(){
 
 
    useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/product/showbyid/${id}`, {
+    axios.get(`${process.env.REACT_APP_API_URL}/product/showbyid/${id}`, {
         headers: {
             Accept: "application/json",
             Authorization: "Bearer " + token,
@@ -58,7 +58,7 @@ export default function Updateproducts(){
         formdata.append('category_id', categoryId);
         formdata.append('image', image);
 
-        let res= await axios.post(`http://127.0.0.1:8000/api/product/update/${id}`,
+        let res= await axios.post(`${process.env.REACT_APP_API_URL}/product/update/${id}`,
                formdata,
             {
                 headers:{

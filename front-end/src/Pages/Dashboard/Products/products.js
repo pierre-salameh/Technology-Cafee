@@ -14,7 +14,7 @@ export default function Products() {
     useEffect(() => {
        
         axios
-            .get("http://127.0.0.1:8000/api/product/show", {
+            .get(`${process.env.REACT_APP_API_URL}/product/show`, {
                 headers: {
                     Accept: "application/json",
                     Authorization: "Bearer " + token,
@@ -31,7 +31,7 @@ export default function Products() {
 
     async function deleteProduct(id) {
         try {
-            const res = await axios.delete(`http://127.0.0.1:8000/api/product/delete/${id}`, {
+            const res = await axios.delete(`${process.env.REACT_APP_API_URL}/product/delete/${id}`, {
                 headers: {
                     Authorization: "Bearer " + token,
                 },

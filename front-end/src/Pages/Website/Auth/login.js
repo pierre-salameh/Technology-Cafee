@@ -34,7 +34,7 @@ export default function Login(){
     setaccept(true);
 
     try{
-        let res= await axios.post("http://127.0.0.1:8000/api/login",
+        let res= await axios.post(`${process.env.REACT_APP_API_URL}/login`,
             {
                 email:email,
                 password:password,

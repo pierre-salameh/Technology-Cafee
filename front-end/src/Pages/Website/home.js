@@ -21,7 +21,7 @@ export default function Home() {
     const token = context.auth.token;
 
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/api/public-products", {
+        axios.get(`${process.env.REACT_APP_API_URL}/public-products`, {
             headers: {
                 Accept: "application/json",
             },
@@ -38,7 +38,7 @@ export default function Home() {
             console.error("Error fetching products:", error);
         });
 
-        axios.get("http://127.0.0.1:8000/api/categories", {
+        axios.get(`${process.env.REACT_APP_API_URL}/categories`, {
             headers: {
                 Accept: "application/json",
             },
@@ -102,7 +102,7 @@ export default function Home() {
 
     const sendAllOrdersToManagement = () => {
         let storedTableId = localStorage.getItem("tableId") || 1;
-        axios.post("http://127.0.0.1:8000/api/send-all-orders", {
+        axios.post(`${process.env.REACT_APP_API_URL}/send-all-orders`, {
             orders: orderedProducts,
             table_id: storedTableId,
         }, {

@@ -11,7 +11,7 @@ export default function OrdersPage() {
     useEffect(() => {
         
         axios
-            .get("http://127.0.0.1:8000/api/orders", {
+            .get(`${process.env.REACT_APP_API_URL}/orders`, {
                 headers: {
                     Accept: "application/json",
                     Authorization: `Bearer ${token}`, 
@@ -29,7 +29,7 @@ export default function OrdersPage() {
 
     const handleDeleteOrder = (orderId) => {
         axios
-            .delete(`http://127.0.0.1:8000/api/orders/${orderId}`, {
+            .delete(`${process.env.REACT_APP_API_URL}/orders/${orderId}`, {
                 headers: {
                     Accept: "application/json",
                     Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ export default function OrdersPage() {
 
     const deleteAllOrders = () => {
         axios
-            .delete("http://127.0.0.1:8000/api/orders", {
+            .delete(`${process.env.REACT_APP_API_URL}/orders`, {
                 headers: {
                     Accept: "application/json",
                     Authorization: `Bearer ${token}`,

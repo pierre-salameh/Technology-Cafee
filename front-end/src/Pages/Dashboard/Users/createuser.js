@@ -30,7 +30,7 @@ export default function Createuser(){
     setaccept(true);
 
     try{
-        let res= await axios.post("http://127.0.0.1:8000/api/user/create",
+        let res= await axios.post(`${process.env.REACT_APP_API_URL}/user/create`,
             {
                 name: name,
                 email:email,

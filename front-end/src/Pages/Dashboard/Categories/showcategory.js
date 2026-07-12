@@ -10,7 +10,7 @@ export default function ShowCategories() {
     useEffect(() => {
         async function fetchCategories() {
             try {
-                const response = await axios.get("http://127.0.0.1:8000/api/categories");
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/categories`);
                 setCategories(response.data); 
             } catch (err) {
                 setError("Failed to load categories."); 
@@ -23,7 +23,7 @@ export default function ShowCategories() {
    
     async function deleteCategory(id) {
         try {
-            await axios.delete(`http://127.0.0.1:8000/api/categories/${id}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/categories/${id}`);
             setCategories(categories.filter((category) => category.id !== id)); 
             setMessage("Category deleted successfully."); 
         } catch (err) {

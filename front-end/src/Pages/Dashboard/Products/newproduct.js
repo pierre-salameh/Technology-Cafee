@@ -20,7 +20,7 @@ export default function Newproducts() {
     useEffect(() => {
         async function fetchCategories() {
             try {
-                const response = await axios.get("http://127.0.0.1:8000/api/categories", {
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/categories`, {
                     headers: {
                         Authorization: "Bearer " + token,
                     },
@@ -47,7 +47,7 @@ export default function Newproducts() {
             formData.append("image", image);
             formData.append("category_id", categoryId); 
 
-            await axios.post("http://127.0.0.1:8000/api/product/create", formData, {
+            await axios.post(`${process.env.REACT_APP_API_URL}/product/create`, formData, {
                 headers: {
                     Authorization: "Bearer " + token,
                 },
