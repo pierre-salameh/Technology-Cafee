@@ -16,7 +16,10 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY . .
 
 # تثبيت Laravel dependencies
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader \
+    && php artisan config:clear \
+    && php artisan route:clear \
+    && php artisan view:clear
 
 # إعطاء صلاحيات
 RUN chmod -R 775 storage bootstrap/cache
@@ -25,4 +28,4 @@ RUN chmod -R 775 storage bootstrap/cache
 EXPOSE 8000
 
 # تشغيل السيرفر
-CMD php artisan serve --host=0.0.0.0 --port=8000
+CMD php artisan serve --host=0.0.0.0 --port=$PORT
