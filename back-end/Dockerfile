@@ -16,9 +16,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY . .
 
 # تثبيت Laravel dependencies
-RUN composer install --no-dev --optimize-autoloader --no-interaction \
-    && php artisan package:discover --ansi \
-    && php artisan about
+RUN composer install --no-dev --optimize-autoloader
 
 # إعطاء صلاحيات
 RUN chmod -R 775 storage bootstrap/cache
