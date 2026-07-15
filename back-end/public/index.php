@@ -1,15 +1,21 @@
 <?php
 
-echo "1<br>";
+use Illuminate\Http\Request;
 
 require __DIR__.'/../vendor/autoload.php';
 
-echo "2<br>";
-
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
-echo "3<br>";
+$response = $app->handleRequest(Request::capture());
 
-$app->handleRequest(Illuminate\Http\Request::capture());
+echo "<h2>STATUS: ".$response->getStatusCode()."</h2>";
 
-echo "4";
+echo "<pre>";
+print_r($response->headers->all());
+echo "</pre>";
+
+echo "<hr>";
+
+echo $response->getContent();
+
+exit;
