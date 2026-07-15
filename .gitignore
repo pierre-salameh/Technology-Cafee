@@ -8,7 +8,19 @@ front-end/build/
 #Backend (Laravel)
 back-end/vendor/
 back-end/.env
-back-end/storage/framework/cache/
-back-end/storage/framework/sessions/
-back-end/storage/framework/views/
+back-end/storage/framework/cache/*
+!back-end/storage/framework/cache/.gitignore
+!back-end/storage/framework/cache/data/
+
+back-end/storage/framework/cache/data/*
+!back-end/storage/framework/cache/data/.gitignore
+
+back-end/storage/framework/sessions/*
+!back-end/storage/framework/sessions/.gitignore
+
+back-end/storage/framework/views/*
+!back-end/storage/framework/views/.gitignore
+
+back-end/storage/logs/*
+!back-end/storage/logs/.gitignore
 back-end/storage/logs/
