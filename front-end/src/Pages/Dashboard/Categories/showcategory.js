@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Cookies from "universal-cookie";
 
 export default function ShowCategories() {
     const [categories, setCategories] = useState([]); 
@@ -23,7 +24,9 @@ export default function ShowCategories() {
    
     async function deleteCategory(id) {
         try {
-            await axios.delete(`${process.env.REACT_APP_API_URL}/categories/${id}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/categories/${id}`, {
+                headers: { Accept: "application/json", Authorization: "Bearer " + new Cookies().get("Bearer") },
+            });
             setCategories(categories.filter((category) => category.id !== id)); 
             setMessage("Category deleted successfully."); 
         } catch (err) {

@@ -50,6 +50,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::prefix('order')->controller(OrderController::class)->group(function () {
         Route::get('/orders', [OrderController::class, 'index']);
     });*/
+
+    // Admin data: moved here so they require login (they were public before)
+    Route::get('/orders', [OrderController::class, 'getOrders']);
+    Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
+    Route::delete('/orders', [OrderController::class, 'destroyAll']);
+    Route::get('/complaints', [ComplaintController::class, 'index']);
+    Route::delete('/complaints', [ComplaintController::class, 'deleteAll']);
+    Route::post('/categories/create', [CategoriesController::class, 'create']);
+    Route::delete('/categories/{id}', [CategoriesController::class, 'destroyy']);
 });
 
 
@@ -68,26 +77,19 @@ Route::get('/public-products', [ProductsController::class, 'publicIndex']);
 Route::post('/send-all-orders', [OrderController::class, 'sendAllOrders']);
 //Route::get('/orders', [OrderController::class, 'index']);
 
-Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
-Route::delete('/orders', [OrderController::class, 'destroyAll']);
 
 
 Route::post('/complaints', [ComplaintController::class, 'store']);
-Route::get('/complaints', [ComplaintController::class, 'index']);
 
 
 Route::get('/products/{categoryId}', [ProductsController::class, 'getProductsByCategory']);
 
 
-Route::get('/orders', [OrderController::class, 'getOrders']);
 
 
 
 
-Route::post('/categories/create', [CategoriesController::class, 'create']);
 Route::get('categories', [CategoriesController::class, 'index']);
 
-Route::delete('/categories/{id}', [CategoriesController::class, 'destroyy']);
 
 
-Route::delete('/complaints', [ComplaintController::class, 'deleteAll']);

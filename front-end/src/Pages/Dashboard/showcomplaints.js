@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Cookies from 'universal-cookie';
 
 export default function ShowComplaints() {
   const [complaints, setComplaints] = useState([]);
@@ -13,7 +14,9 @@ export default function ShowComplaints() {
 
   async function fetchComplaints() {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/complaints`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/complaints`, {
+        headers: { Accept: "application/json", Authorization: "Bearer " + new Cookies().get("Bearer") },
+      });
       setComplaints(response.data); 
     } catch (err) {
       console.error('Error fetching complaints:', err);
@@ -24,7 +27,9 @@ export default function ShowComplaints() {
  
   async function deleteAllComplaints() {
     try {
-      await axios.delete(`${process.env.REACT_APP_API_URL}/complaints`);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/complaints`, {
+        headers: { Accept: "application/json", Authorization: "Bearer " + new Cookies().get("Bearer") },
+      });
       setComplaints([]);
       setMessage('تم حذف جميع الشكاوى بنجاح');
     } catch (err) {

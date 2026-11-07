@@ -2,27 +2,30 @@ FROM php:8.2-cli
 
 WORKDIR /app
 
-# تثبيت dependencies النظام
-RUN apt-get update && apt-get install -y \
-    git curl zip unzip libpng-dev libonig-dev libxml2-dev
+# System dependencies (libpq-dev is needed for PostgreSQL)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git curl zip unzip libpng-dev libonig-dev libxml2-dev libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# تثبيت extensions PHP
-RUN docker-php-ext-install pdo pdo_mysql mbstring
+# PHP extensions (MySQL and PostgreSQL both supported)
+RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql mbstring
 
-# تثبيت Composer
+# Allow uploading product images (default PHP limit is 2MB)
+RUN printf "upload_max_filesize=10M\npost_max_size=12M\nmemory_limit=256M\n" \
+    > /usr/local/etc/php/conf.d/uploads.ini
+
+# Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# نسخ المشروع
+# Project files
 COPY . .
 
-# تثبيت Laravel dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Laravel dependencies
+RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# إعطاء صلاحيات
-RUN chmod -R 775 storage bootstrap/cache
+# Entrypoint (runs migrations, then starts the server)
+RUN sed -i 's/\r$//' /app/docker-entrypoint.sh && chmod +x /app/docker-entrypoint.sh
 
-# فتح المنفذ
 EXPOSE 8000
 
-# تشغيل السيرفر
-CMD php artisan serve --host=0.0.0.0 --port=$PORT
+CMD ["/app/docker-entrypoint.sh"]
