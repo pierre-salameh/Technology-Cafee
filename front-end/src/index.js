@@ -5,6 +5,7 @@ import './all.min.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import UserProvider from "./Pages/Website/Context/usercontext";
+import './mobile.css';
 
 
 

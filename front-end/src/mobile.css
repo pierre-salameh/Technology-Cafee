@@ -1,0 +1,187 @@
+/* ==========================================================
+   Phone layout only.
+   Everything below is inside a media query, so on tablets,
+   laptops and desktops the design stays exactly as it was.
+   ========================================================== */
+@media (max-width: 768px) {
+
+  /* ---------- Top bars (customer pages + dashboard) ---------- */
+  nav {
+    padding: 10px 12px !important;
+    gap: 8px;
+  }
+  nav > span {
+    font-size: 1rem !important;
+    min-width: 0;
+  }
+  nav a,
+  nav .register-nav {
+    padding: 6px 10px !important;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* Fixed background images are glitchy on phones */
+  .home-container,
+  .welcome-container,
+  .parent.login,
+  .game-container {
+    background-attachment: scroll !important;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* ---------- Welcome page ---------- */
+  .welcome-container {
+    padding-top: 70px;
+  }
+  .welcome-box {
+    margin-left: 0 !important;      /* was -450px: pushed the box off-screen */
+    padding: 24px 18px !important;
+    width: 90%;
+  }
+  .welcome-box h2 {
+    font-size: 22px !important;
+  }
+  .welcome-buttons {
+    flex-direction: column;
+  }
+
+  /* ---------- Login / Sign up ---------- */
+  .parent.login {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 80px 0 24px;
+  }
+  .register.login {
+    margin: 0 !important;           /* was margin-right:450px: pushed off-screen */
+    padding: 24px 18px !important;
+    width: 90% !important;
+  }
+
+  /* ---------- Home (menu) ---------- */
+  .home-container {
+    padding: 10px !important;
+  }
+  .content {
+    padding: 10px !important;
+  }
+  .home-container .container {
+    padding: 10px !important;
+  }
+  .gh {
+    width: 110px !important;
+    height: 110px !important;
+    margin: 70px 14px 0 0 !important;
+    flex-shrink: 0;
+  }
+  .text {
+    font-size: 18px !important;
+    margin-top: 70px !important;
+  }
+  .text h1 {
+    font-size: 1.5rem !important;
+    margin-top: 0 !important;
+  }
+  .home-container div[style*="margin-left: 310px"] {
+    margin-left: 12px !important;
+    font-size: 1.4rem !important;
+  }
+  .home-container div[style*="padding: 30px"] {
+    padding: 6px !important;
+  }
+
+  /* Tables: wrap text, and scroll sideways if still too wide */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  th,
+  td {
+    padding: 8px 6px !important;
+    font-size: 13px;
+  }
+  th {
+    width: auto !important;
+    white-space: nowrap;
+  }
+  td img {
+    width: 64px !important;
+  }
+
+  /* Image pop-ups were limited to 30% / 50% of the screen */
+  .popup-image {
+    max-width: 92% !important;
+    max-height: 80% !important;
+  }
+  .modal-content {
+    max-width: 92% !important;
+    max-height: 80% !important;
+  }
+
+  /* ---------- Game ---------- */
+  .game-container {
+    padding: 12px !important;
+  }
+  .game-container h1 {
+    font-size: 1.7rem !important;
+  }
+  .question-section h2 {
+    font-size: 1.2rem !important;
+    padding: 0 8px;
+  }
+  .answer-button {
+    font-size: 1rem !important;
+  }
+  .result h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* ---------- Complaint page (fixed 100vh height cut the text) ---------- */
+  div[style*="height: 100vh"] {
+    height: auto !important;
+    min-height: 100vh;
+    align-items: flex-start !important;
+    padding: 80px 0 24px;
+  }
+
+  /* ---------- Dashboard ---------- */
+  .content-flex {
+    flex-direction: column;
+  }
+  .side-bar {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 56px !important;
+    padding: 10px !important;
+    border-right: none !important;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .side-bar br {
+    display: none;
+  }
+  .item-link {
+    font-size: 14px !important;
+    padding: 6px 10px !important;
+    margin-bottom: 0 !important;
+  }
+  .item-link .fa-solid,
+  .item-link .fa-brands {
+    margin-right: 6px;
+  }
+  .content-flex > div[style*="width: 80%"] {
+    width: 100% !important;
+    margin-top: 10px !important;
+    padding: 0 8px;
+    overflow-x: auto;
+  }
+  .content-flex h1 {
+    font-size: 1.6rem !important;
+  }
+}
